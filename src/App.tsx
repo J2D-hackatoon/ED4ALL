@@ -1,15 +1,12 @@
-// import { useState } from 'react';
 
-// import Card from "./components/Card/Card";
-
-// import { Aside } from "./components/Aside/Aside";
+import MainGraph from "./components/MainGraph/MainGraph";
 
 function App(): JSX.Element {
   return (
-    <>
-      {/* <Aside /> */}
+    <div className="flex flex-col min-h-screen ">
+      <MainGraph />
       {/* <Card /> */}
-    </>
+    </div>
   );
 }
 

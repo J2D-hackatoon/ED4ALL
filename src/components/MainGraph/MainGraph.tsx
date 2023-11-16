@@ -67,8 +67,8 @@ const MainGraph = (): JSX.Element => {
     ],
   };
   return (
-    <section>
-      <Bar data={data} options={options} />
+    <section className='flex flex-col border-2 border-black pt-2 max-h-96 justify-center items-center m-2 rounded-md'>
+      <Bar data={data} options={options}  />
     </section>
   );
 };
