@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom"
 import Header from "../components/Header/Header"
-// import Footer from "../components/footer/Footer"
+import Footer from "../components/Footer/Footer"
 // import { useStore } from "../store/useStore"
 
 
@@ -17,7 +17,7 @@ export const RootLayout: React.FC<RootLayoutProps> = () => {
                     <Outlet />
                 </main>
             </div>
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }
