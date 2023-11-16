@@ -1,12 +1,13 @@
 // import { useState } from 'react';
 
 import './App.css';
+import { RootLayout } from './layout/RootLayout';
 
 function App() {
 
   return (
     <>
-      hello
+      <RootLayout />
     </>
   );
 }
