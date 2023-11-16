@@ -13,7 +13,7 @@ export const RootLayout: React.FC<RootLayoutProps> = () => {
         <div className="flex flex-col min-h-screen" >
             <Header />
             <div className="flex justify-around max-h-screen">
-                <main className="text font-creepster  flex  min-w-full">
+                <main className="text font-creepster flex  min-w-full">
                     <Outlet />
                 </main>
             </div>

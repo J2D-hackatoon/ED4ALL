@@ -1,7 +1,7 @@
 
 const Header = () => {
     return (
-        <header className="min-h-screen-10 ">Header</header>
+        <header className="min-w-screen h-10 bg-eme">Header</header>
     )
 }
 
