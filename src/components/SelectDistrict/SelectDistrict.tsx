@@ -1,7 +1,7 @@
 import { useDistricts } from '../../utils/hooks/useDistricts';
 import Select from 'react-select';
 
-export const SelectDistrict = () => {
+export const SelectDistrict = (): JSX.Element => {
   const { isLoading, isError, data } = useDistricts();
 
   console.log('DATAAA', data);
