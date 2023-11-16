@@ -8,6 +8,6 @@ export const SelectDistrict = () => {
     ]
 
   return (
-    <Select options={options} placeholder="Escoge un distrito"  className="w-1/4 rounded-md border border-accent min-w-[250px] md:min-w-[450px] outline-none cursor-pointer"/>
+    <Select options={options} placeholder="Escoge un distrito"  className="w-1/5 rounded-md border border-accent min-w-[250px] md:min-w-[450px] outline-none cursor-pointer"/>
   )
 }
