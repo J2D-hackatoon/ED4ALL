@@ -1,10 +1,10 @@
 import './App.css'
-import { RootLayout } from './pages/RootLayout'
+import { Aside } from './pages/Aside'
 
 function App() {
 
   return (
-    <RootLayout />
+    <Aside />
   )
 }
 
