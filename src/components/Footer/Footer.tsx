@@ -1,6 +1,6 @@
 const Footer = (): JSX.Element => {
   return (
-    <footer className='footer p-10 bg-neutral-content text-neutral'>
+    <footer className='footer p-10 bg-neutral-content bottom-0 relative text-neutral'>
       <aside>
         <img
           src='/src/assets/ed-4-all-logo.svg'
