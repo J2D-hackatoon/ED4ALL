@@ -9,7 +9,7 @@ export const RootLayout: React.FC<RootLayoutProps> = () => {
     return (
         <div className="min-h-screen">
             <Header />
-            <div className="flex">
+            <div className="flex p-2 gap-2">
                 <Aside />
                 <main className=" flex-grow ">
                     <Outlet />
