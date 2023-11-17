@@ -1,4 +1,6 @@
 import { Bar } from 'react-chartjs-2';
+import { useDistricts } from '../../utils/hooks/useDistricts';
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -23,6 +25,8 @@ ChartJS.register(
 );
 
 const MainGraph = (): JSX.Element => {
+  const response = useDistricts().data;
+
   const options = {
     responsive: true,
     plugins: {
@@ -36,24 +40,13 @@ const MainGraph = (): JSX.Element => {
     },
   };
 
-  const labels = [
-    'Ciutat Vella',
-    "L'Eixample",
-    'Sants-Montjuic',
-    'Les Corts',
-    'Sarria-Sant Gervasi',
-    'Gracia',
-    'Horta-Guinardo',
-    'Nou Barris',
-    'Sant Andreu',
-    'Sant Marti',
-  ];
+  const labels = [];
+  const avgIncomes = [];
 
-  const avgIncomes = [
-    35538.6927347462, 63053.0156919716, 44208.8437911097, 84402.2268057785,
-    99781.2133405675, 56619.4895918367, 47735.0346407686, 37181.6429039105,
-    45410.3399723948, 51688.8777801599,
-  ];
+  response?.forEach(district => {
+    labels.push(district.district_name);
+    avgIncomes.push(district.avg_income);
+  });
 
   const data = {
     labels,
@@ -67,8 +60,8 @@ const MainGraph = (): JSX.Element => {
     ],
   };
   return (
-    <section className='flex flex-col border-2 border-black pt-2 max-h-96 max-w-1xl md:max-w-3xl justify-center items-center  rounded-md'>
-      <Bar data={data} options={options}  />
+    <section className='flex flex-col border-2 border-black pt-2 max-h-96 justify-center items-center  rounded-md'>
+      <Bar data={data} options={options} />
     </section>
   );
 };
