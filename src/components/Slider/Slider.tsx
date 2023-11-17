@@ -6,7 +6,7 @@ export const Slider = (): JSX.Element => {
   const { data } = useDistricts();
 
   return (
-    <div className='carousel carousel-center w-full p-4 gap-0.5 space-x-4 rounded-box '>
+    <div className='carousel carousel-center w-full  gap-0.5 space-x-4 rounded-box max-w-2xl border p-2'>
       <div className='carousel-item gap-2 items-center p-4 md:p-8'>
         {data?.map(district => {
           // Find the corresponding image data for the district

@@ -21,7 +21,7 @@ export const SelectDistrict = (): JSX.Element => {
     <Select
       options={options}
       placeholder='Escoge un distrito'
-      className='w-1/4 rounded-md border border-accent min-w-[250px] md:min-w-[450px] outline-none cursor-pointer'
+      className='w-1/4 rounded-md border border-accent min-w-[250px] md:min-w-2/5 outline-none cursor-pointer'
     />
   );
 };

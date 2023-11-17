@@ -11,7 +11,7 @@ export const RootLayout: React.FC<RootLayoutProps> = () => {
             <Header />
             <div className="flex p-2 gap-2">
                 <Aside />
-                <main className=" flex-grow ">
+                <main className=" flex-grow gap-2 md:justify-center">
                     <Outlet />
                 </main>
             </div>

@@ -2,7 +2,7 @@
 interface Props {
   imageRoute: string;
   districtName: string;
-
+}
 const Card = ({ imageRoute, districtName }: Props) => {
   return (
     <div className='card w-56 bg-base-100 shadow-xl'>
