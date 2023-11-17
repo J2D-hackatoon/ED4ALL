@@ -1,8 +1,6 @@
 export const fetchDistricts = async (): Promise<any[]> => {
   try {
-    const response = await fetch(
-      `https://silver-ladybug-cape.cyclic.app/districts`,
-    );
+    const response = await fetch(`http://localhost:3001/districts`);
 
     const data = await response.json();
 
