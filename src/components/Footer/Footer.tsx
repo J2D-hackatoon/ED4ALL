@@ -3,7 +3,7 @@ const Footer = (): JSX.Element => {
     <footer className='footer p-2 bg-neutral-content bottom-0 relative text-neutral'>
       <aside>
         <img
-          src='/src/assets/ed-4-all-logo.svg'
+          src='/src/assets/ed4all_logo.svg'
           alt='logo'
           className='max-h-20'
         />

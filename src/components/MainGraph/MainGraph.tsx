@@ -1,5 +1,6 @@
 import { Bar } from 'react-chartjs-2';
 import { useDistricts } from '../../utils/hooks/useDistricts';
+import { type District } from '../../types/types';
 
 import {
   Chart as ChartJS,
@@ -24,17 +25,7 @@ ChartJS.register(
   Filler,
 );
 
-interface District {
-  avg_income: number;
-  centers: number[];
-  length: number;
-  density_population: number;
-  district_code: number;
-  district_name: string;
-  educational_occupational_ranking: number;
-  __v: number;
-  _id: string;
-}
+
 const MainGraph = (): JSX.Element => {
   const response = useDistricts().data;
 
