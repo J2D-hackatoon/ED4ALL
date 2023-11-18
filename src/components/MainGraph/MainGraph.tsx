@@ -46,26 +46,36 @@ const MainGraph = (): JSX.Element => {
       },
       title: {
         display: true,
-        text: 'Renta media anual (€)',
+        text: 'Renta media anual (€) y densidad de población',
       },
     },
   };
 
   const labels: string[] = [];
   const avgIncomes: number[] = [];
+  const densityPopulation: number[] = [];
 
   response?.forEach((district: District) => {
     labels.push(district.district_name);
-    avgIncomes.push(district.avg_income);
+    avgIncomes.push(district.avg_income );
+    densityPopulation.push(district.density_population);
   });
 
   const data = {
     labels,
     datasets: [
       {
+        label: 'Ingresos Promedio',
         data: avgIncomes,
         backgroundColor: '#F68067',
         hoverBackgroundColor: '#66CC8A',
+        borderRadius: 6,
+      },
+      {
+        label: 'Densidad de Población',
+        data: densityPopulation,
+        backgroundColor: '#66CC8A',
+        hoverBackgroundColor: '#F68067',
         borderRadius: 6,
       },
     ],
