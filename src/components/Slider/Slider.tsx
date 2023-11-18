@@ -1,12 +1,23 @@
 import Card from '../Card/Card';
 import { useDistricts } from '../../utils/hooks/useDistricts';
 import { imagesData } from '../../utils/data/data';
-
+import { useState } from 'react';
+interface SliderProps {
+  imageRoute: string;
+  districtName: string;
+}
 export const Slider = (): JSX.Element => {
   const { data } = useDistricts();
+  const [selectedCard, setSelectedCard] = useState<SliderProps | null>(null);
+
+
+  const handleCardClick = (imageRoute: string, districtName: string): void => {
+    setSelectedCard({ imageRoute, districtName });
+  };
+  console.log(selectedCard);
 
   return (
-    <div className='carousel carousel-center w-full  gap-0.5 space-x-4 rounded-box max-w-2xl border p-2'>
+    <div className='carousel carousel-center w-full  gap-0.5 space-x-4 rounded-box max-w-4xl border p-2'>
       <div className='carousel-item gap-2 items-center p-4 md:p-8'>
         {data?.map(district => {
           // Find the corresponding image data for the district
@@ -18,9 +29,12 @@ export const Slider = (): JSX.Element => {
                 .replace(/[\u0300-\u036f]/g, ''),
           );
 
-          if (imageData) {
+          if (imageData != null) {
             return (
-              <div key={district._id}>
+              <div key={district._id} className='max-w-xl'
+                onClick={() => { handleCardClick(imageData.route, district.district_name); }
+                }
+              >
                 <Card
                   imageRoute={imageData.route}
                   districtName={district.district_name}
