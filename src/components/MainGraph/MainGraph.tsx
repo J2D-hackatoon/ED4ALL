@@ -24,6 +24,17 @@ ChartJS.register(
   Filler,
 );
 
+interface District {
+  avg_income: number;
+  centers: number[];
+  length: number;
+  density_population: number;
+  district_code: number;
+  district_name: string;
+  educational_occupational_ranking: number;
+  __v: number;
+  _id: string;
+}
 const MainGraph = (): JSX.Element => {
   const response = useDistricts().data;
 
@@ -40,10 +51,10 @@ const MainGraph = (): JSX.Element => {
     },
   };
 
-  const labels = [];
-  const avgIncomes = [];
+  const labels: string[] = [];
+  const avgIncomes: number[] = [];
 
-  response?.forEach(district => {
+  response?.forEach((district: District) => {
     labels.push(district.district_name);
     avgIncomes.push(district.avg_income);
   });
