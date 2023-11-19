@@ -9,9 +9,9 @@ export const RootLayout = (): JSX.Element => {
     return (
         <div className="min-h-screen max-w-screen m-0">
             <Header />
-            <div className="flex p-2 gap-2 ">
+            <div className="flex p-2 gap-2  justify-center md:justify-around">
                 <Aside />
-                <main className=" ">
+                <main className=" w-96 md:w-2/3 max-h-screen">
                     <Outlet />
                 </main>
             </div>

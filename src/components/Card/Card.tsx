@@ -5,7 +5,7 @@ interface Props {
 }
 const Card = ({ imageRoute, districtName }: Props): JSX.Element => {
   return (
-    <div className='card w-56 bg-base-100 shadow-xl'>
+    <div className='card w-56 bg-base-100 shadow-xl hover:cursor-pointer hover:bg-emerald-100'>
       <figure>
         <img src={imageRoute} alt={districtName} loading='lazy' />
       </figure>

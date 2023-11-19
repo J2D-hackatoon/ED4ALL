@@ -17,8 +17,11 @@ export const Slider = (): JSX.Element => {
   console.log(selectedCard);
 
   return (
-    <div className='carousel carousel-center w-full  gap-0.5 space-x-4 rounded-box max-w-4xl border p-2'>
-      <div className='carousel-item gap-2 items-center p-4 md:p-8'>
+    <div className='carousel carousel-center 
+    rounded-box border 
+    flex justify-center md:justify-normal 
+    max-h-96 md:p-2'>
+      <div className='carousel-item gap-2 items-center p-2 md:p-4 flex flex-col md:flex-row '>
         {data?.map(district => {
           // Find the corresponding image data for the district
           const imageData = imagesData.find(
@@ -31,7 +34,7 @@ export const Slider = (): JSX.Element => {
 
           if (imageData != null) {
             return (
-              <div key={district._id} className='max-w-xl'
+              <div key={district._id} className='max-w-xl '
                 onClick={() => { handleCardClick(imageData.route, district.district_name); }
                 }
               >
