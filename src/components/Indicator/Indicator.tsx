@@ -1,6 +1,6 @@
 import { useDistricts } from '../../utils/hooks/useDistricts';
 
-const Indicator = ({ districtCode }): JSX.Element => {
+const Indicator = (districtCode: number): JSX.Element => {
   const { data } = useDistricts();
   const educationalOccupationalRanking = data?.find(
     district => district.district_code === districtCode,
