@@ -9,6 +9,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import ErrorPage from './pages/ErrorPage/ErrorPage.tsx';
 import RootLayout from './layout/RootLayout.tsx';
+import DistrictPage from './pages/DistrictPage/DistrictPage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <App />,
+      },
+      {
+        path: "/districts",
+        element: <DistrictPage />,
       },
 
       {
@@ -33,7 +38,7 @@ const router = createBrowserRouter([
 // Query Client
 const queryClient = new QueryClient();
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />

@@ -43,6 +43,7 @@ export const SelectDistrict = (): JSX.Element => {
         onChange={(event) => { handleDistrictSelect(event) }}>
         {data?.map((district: District) => (
           <option key={district.district_code}
+          placeholder='escoje un distrito'
             value={district.district_name}
             className='bg-gray-100 text-gray-800 m-5' >
             {district.district_name}

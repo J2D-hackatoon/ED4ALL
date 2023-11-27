@@ -1,14 +1,13 @@
 
 
-import MainGraph from "./components/MainGraph/MainGraph";
-import { Slider } from './components/Slider/Slider';
+
+import HomePage from "./pages/Home/HomePage";
         
 function App(): JSX.Element {
   return (
     <div className="flex flex-col space-y-2">
-      <MainGraph />
-      <Slider />
-
+     
+      <HomePage />
     </div>
   );
 }
